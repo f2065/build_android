@@ -45,7 +45,8 @@ make clean
 rm -rf out/
 export LC_ALL=C
 . build/envsetup.sh
-time brunch eagle
+lunch lineage_eagle-userdebug
+time mka recoveryimage
 }
 
 function set_go_mode {
