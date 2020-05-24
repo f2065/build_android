@@ -25,7 +25,7 @@ exit
 ;;
 esac
 
-
+printf "\033]2;%s Sync TWRP - main sources...\007" $(date +"%Y-%m-%d_%H:%M:%S")
 echo "*** main sources..."
 cd ~/src_M2_TWRP_LOS
 if [[ $src_init -eq 1 ]]; then
@@ -33,6 +33,7 @@ repo init -u https://github.com/f2065/platform_manifest_twrp_lineageos -b twrp-1
 fi
 repo sync --no-clone-bundle --no-tags --force-sync -j 25
 
+printf "\033]2;%s Sync TWRP - qcom_common...\007" $(date +"%Y-%m-%d_%H:%M:%S")
 echo "*** qcom_common..."
 if [[ $src_init -eq 1 ]]; then
 cd ~/src_M2_TWRP_LOS
@@ -45,6 +46,7 @@ fi
 
 if [[ $src_dev -ne 1 ]]; then
 
+printf "\033]2;%s Sync TWRP - kernel...\007" $(date +"%Y-%m-%d_%H:%M:%S")
 echo "*** kernel..."
 if [[ $src_init -eq 1 ]]; then
 cd ~/src_M2_TWRP_LOS
@@ -56,6 +58,7 @@ fi
 
 fi
 
+printf "\033]2;%s Sync TWRP - end\007" $(date +"%Y-%m-%d_%H:%M:%S")
 cd ~/src_M2_TWRP_LOS
 
 echo "*****************************************************************************"

@@ -26,6 +26,7 @@ exit
 esac
 
 
+printf "\033]2;%s Sync LineageOS 17.1 - main sources...\007" $(date +"%Y-%m-%d_%H:%M:%S")
 echo "*** main sources..."
 cd ~/src_M2_LOS171
 if [[ $src_init -eq 1 ]]; then
@@ -34,11 +35,13 @@ fi
 repo sync --no-clone-bundle --no-tags --force-sync -j 25
 
 # fork with build fix for msm8226
+# printf "\033]2;%s Sync LineageOS 17.1 - gps fix...\007" $(date +"%Y-%m-%d_%H:%M:%S")
 # echo "*** gps fix..."
 # cd ~/src_M2_LOS171
 # rm -rf hardware/qcom/gps
 # git clone https://github.com/f2065/android_hardware_qcom_gps -b lineage-16.0 hardware/qcom/gps
 
+printf "\033]2;%s Sync LineageOS 17.1 - boringssl-compat...\007" $(date +"%Y-%m-%d_%H:%M:%S")
 echo "*** boringssl-compat..."
 if [[ $src_init -eq 1 ]]; then
 cd ~/src_M2_LOS171
@@ -48,6 +51,7 @@ cd ~/src_M2_LOS171/external/sony/boringssl-compat
 git pull
 fi
 
+printf "\033]2;%s Sync LineageOS 17.1 - sony_timekeep...\007" $(date +"%Y-%m-%d_%H:%M:%S")
 echo "*** sony_timekeep..."
 if [[ $src_init -eq 1 ]]; then
 cd ~/src_M2_LOS171
@@ -57,6 +61,7 @@ cd ~/src_M2_LOS171/hardware/sony/timekeep
 git pull
 fi
 
+printf "\033]2;%s Sync LineageOS 17.1 - qcom_common...\007" $(date +"%Y-%m-%d_%H:%M:%S")
 echo "*** qcom_common..."
 if [[ $src_init -eq 1 ]]; then
 cd ~/src_M2_LOS171
@@ -66,6 +71,7 @@ cd ~/src_M2_LOS171/device/qcom/common
 git pull
 fi
 
+printf "\033]2;%s Sync LineageOS 17.1 - sony_common...\007" $(date +"%Y-%m-%d_%H:%M:%S")
 echo "*** sony_common..."
 if [[ $src_init -eq 1 ]]; then
 cd ~/src_M2_LOS171
@@ -75,6 +81,7 @@ cd ~/src_M2_LOS171/device/sony/common
 git pull
 fi
 
+printf "\033]2;%s Sync LineageOS 17.1 - sony_macaddrsetup...\007" $(date +"%Y-%m-%d_%H:%M:%S")
 echo "*** sony_macaddrsetup..."
 if [[ $src_init -eq 1 ]]; then
 cd ~/src_M2_LOS171
@@ -84,6 +91,7 @@ cd ~/src_M2_LOS171/hardware/sony/macaddrsetup
 git pull
 fi
 
+# printf "\033]2;%s Sync LineageOS 17.1 - sony_thermanager...\007" $(date +"%Y-%m-%d_%H:%M:%S")
 # echo "*** sony_thermanager..."
 # if [[ $src_init -eq 1 ]]; then
 # cd ~/src_M2_LOS171
@@ -93,6 +101,7 @@ fi
 # git pull
 # fi
 
+# printf "\033]2;%s Sync LineageOS 17.1 - devicesettings...\007" $(date +"%Y-%m-%d_%H:%M:%S")
 #echo "*** devicesettings..."
 #if [[ $src_init -eq 1 ]]; then
 #cd ~/src_M2_LOS171
@@ -102,6 +111,7 @@ fi
 #git pull
 #fi
 
+printf "\033]2;%s Sync LineageOS 17.1 - ExtendedSettings...\007" $(date +"%Y-%m-%d_%H:%M:%S")
 echo "*** ExtendedSettings..."
 if [[ $src_init -eq 1 ]]; then
 cd ~/src_M2_LOS171
@@ -114,6 +124,7 @@ fi
 
 if [[ $src_dev -ne 1 ]]; then
 
+printf "\033]2;%s Sync LineageOS 17.1 - device-sony-eagle...\007" $(date +"%Y-%m-%d_%H:%M:%S")
 echo "*** device-sony-eagle..."
 if [[ $src_init -eq 1 ]]; then
 cd ~/src_M2_LOS171
@@ -123,6 +134,7 @@ cd ~/src_M2_LOS171/device/sony/eagle
 git pull
 fi
 
+printf "\033]2;%s Sync LineageOS 17.1 - device-sony-yukon...\007" $(date +"%Y-%m-%d_%H:%M:%S")
 echo "*** device-sony-yukon..."
 if [[ $src_init -eq 1 ]]; then
 cd ~/src_M2_LOS171
@@ -132,6 +144,7 @@ cd ~/src_M2_LOS171/device/sony/yukon
 git pull
 fi
 
+printf "\033]2;%s Sync LineageOS 17.1 - vendor-sony-yukon...\007" $(date +"%Y-%m-%d_%H:%M:%S")
 echo "*** vendor-sony-yukon..."
 if [[ $src_init -eq 1 ]]; then
 cd ~/src_M2_LOS171
@@ -141,6 +154,7 @@ cd ~/src_M2_LOS171/vendor/sony
 git pull
 fi
 
+printf "\033]2;%s Sync LineageOS 17.1 - kernel...\007" $(date +"%Y-%m-%d_%H:%M:%S")
 echo "*** kernel..."
 if [[ $src_init -eq 1 ]]; then
 cd ~/src_M2_LOS171
@@ -152,6 +166,7 @@ fi
 
 fi
 
+printf "\033]2;%s Sync LineageOS 17.1 - end\007" $(date +"%Y-%m-%d_%H:%M:%S")
 cd ~/src_M2_LOS171
 
 echo "*****************************************************************************"
