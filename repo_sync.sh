@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-if [ $1 == 'init' ] || [ $1 == 'pvt' ] || [ $1 == 'all' ]
+if [ "$1" == "init" ] || [ "$1" == "pvt" ] || [ "$1" == "all" ]
 then
 ./repo_sync_twrp.sh $1
 ./repo_sync_14.sh $1
