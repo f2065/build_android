@@ -4,10 +4,6 @@ if [ $EUID != 0 ]; then
     exit 1
 fi
 
-apt-get update
-apt-get upgrade
-apt-get dist-upgrade
+vmware-toolbox-cmd disk shrinkonly
 
-./system_clean.sh
-
-exit 0
+exit
